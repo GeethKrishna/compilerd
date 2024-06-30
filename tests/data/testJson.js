@@ -41,6 +41,42 @@ const testCases = [
 
     },
     {
+        name: 'go : hello world',
+        reqObject: {
+            language: 'go',
+            script: 'package main\nimport "fmt"\nfunc main() {\n    fmt.Println("hello world")\n}',
+        },
+        expectedResponse: {
+            val: 'hello world\n',
+            status: 200,
+            error: 0,
+        },
+    },
+    {
+        name: 'kotlin : hello world',
+        reqObject: {
+            language: 'kotlin',
+            script: 'fun main() {\n    println("hello world")\n}',
+        },
+        expectedResponse: {
+            val: 'hello world\n',
+            status: 200,
+            error: 0,
+        },
+    },
+    {
+        name: 'csharp : hello world',
+        reqObject: {
+            language: 'c#',
+            script: 'using System;\n\nclass Program\n{\n    static void Main()\n    {\n        Console.WriteLine("hello world");\n    }\n}',
+        },
+        expectedResponse: {
+            val: 'hello world\n',
+            status: 200,
+            error: 0,
+        },
+    },
+    {
         name: 'nodejs : hello world',
         reqObject: {
             language: 'nodejs',
@@ -188,7 +224,7 @@ const testCases = [
         reqObject: {
             language: 'ruby',
             script:
-                'print "hello world"'
+                'print "hello world"',
         },
         expectedResponse: {
             val: 'hello world',
@@ -203,7 +239,7 @@ const testCases = [
             script:
                 'user_input = gets.chomp\n' +
                 'puts user_input',
-            stdin: '10\n'
+            stdin: '10\n',
         },
         expectedResponse: {
             val: '10\n',
